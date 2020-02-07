@@ -1,0 +1,11 @@
+Package: BootstrapDigits
+Type: Package
+Title: Bootstrapping Handwritten Digits
+Version: 0.1.0
+Author: Tim Healy
+Maintainer: healyt22@gmail.com
+Description: Under Construction
+    
+License: 
+Encoding: UTF-8
+LazyData: true
