@@ -1,0 +1,1 @@
+source('R/mnist_data.R')

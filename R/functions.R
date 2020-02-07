@@ -45,6 +45,7 @@ parse_nonzeros = function(train, digit) {
         nonzeros[[i]] = df.i
     }
     out = ldply(nonzeros, data.frame)
+    dir.create('digit_df', showWarnings = FALSE)
     fp = paste0('digit_df/', digit, '.csv')
     write.csv(out, file = fp, sep = ",", row.names = FALSE)
     return(out)

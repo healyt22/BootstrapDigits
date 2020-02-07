@@ -1,12 +1,12 @@
-source('scripts/functions.R')
+source('R/functions.R')
 
 # Load Images
-train = load_image_file("mnist/train-images")
-test  = load_image_file("mnist/test-images")
+train = load_image_file("mnist/train-images-idx3-ubyte")
+test  = load_image_file("mnist/t10k-images-idx3-ubyte")
 
 # Load Labels
-train$y = as.factor(load_label_file("mnist/train-labels"))
-test$y  = as.factor(load_label_file("mnist/test-labels"))
+train$y = as.factor(load_label_file("mnist/train-labels-idx1-ubyte"))
+test$y  = as.factor(load_label_file("mnist/t10k-labels-idx1-ubyte"))
 
 # MNIST Dataset Slide
 par(mfrow=c(4,3))
@@ -22,7 +22,7 @@ for(i in 1:9) {
 }
 
 ## Mean Digits Slide
-source('scripts/mean_digit.R')
+source('R/mean_digit.R')
 par(mfrow=c(2,5))
 mean_digit(0)
 mean_digit(1)
@@ -36,7 +36,7 @@ mean_digit(8)
 mean_digit(9)
 
 ## Bootstrap Digits Slide
-source('scripts/build_digit.R')
+source('R/build_digit.R')
 par(mfrow=c(2,5))
 zero  = build_digit(0, show_plot = TRUE)
 one   = build_digit(1, show_plot = TRUE)
@@ -53,7 +53,7 @@ nine  = build_digit(9, show_plot = TRUE)
 
 
 ## Parametric Bootstrap Number Nonzero Pixels Slide
-source('scripts/build_digit.R')
+source('R/build_digit.R')
 par(mfrow=c(2,5))
 zero  = build_digit(0, show_hist = TRUE)
 one   = build_digit(1, show_hist = TRUE)
@@ -69,7 +69,7 @@ nine  = build_digit(9, show_hist = TRUE)
 
 
 ## Bootstrapping training data
-source('scripts/build_digit.R')
+source('R/build_digit.R')
 N = 10000
 boot.l = list()
 suffix = 1

@@ -1,4 +1,4 @@
-source('scripts/functions.R')
+source('R/functions.R')
 
 mean_digit = function(digit) {
     fp = paste0('digit_df/', digit, '.csv')
